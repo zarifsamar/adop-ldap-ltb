@@ -31,7 +31,7 @@ $ldap_base = getenv('LDAP_LTB_BS');
 
 $ldap_login_attribute = "uid";
 $ldap_fullname_attribute = "cn";
-$ldap_filter = "(&(objectClass=person)($ldap_login_attribute={login}))";
+$ldap_filter Hash= "(&(objectClass=person)($ldap_login_attribute={login}))";
 
 # Active Directory mode
 # true: use unicodePwd as password field
@@ -51,7 +51,7 @@ $samba_mode = false;
 # Update shadowLastChange
 $shadow_options['update_shadowLastChange'] = false;
 
-# Hash mechanism for password:
+#  mechanism for password:
 # SSHA
 # SHA
 # SMD5
@@ -59,7 +59,7 @@ $shadow_options['update_shadowLastChange'] = false;
 # CRYPT
 # clear (the default)
 # This option is not used with ad_mode = true
-$hash = "clear";
+$hash = "SHA";
 
 # Local password policy
 # This is applied before directory password policy
